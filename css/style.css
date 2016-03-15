@@ -1,0 +1,141 @@
+html {
+  margin: -8px;
+}
+
+.boxtop1 {
+background-image: url(http://myfashiony.com/wp-content/uploads/2014/10/wpid-Tumblr-Gifs-Hipster-2015-2016-4.jpg);
+width: 1280px;
+height: 720px;
+border: 1px solid black;
+}
+
+
+.boxtop2 {
+background-image: url(https://clevelmediablog.files.wordpress.com/2015/11/p5090076.jpg?w=5000&h=2813);
+background-size: 1280px;
+width: 1280px;
+height: 720px;
+border: 1px solid black;
+}
+
+.boxtop3 {
+background-image: url(https://s-media-cache-ak0.pinimg.com/564x/2e/b1/c5/2eb1c5a22751ca67f58eb415ce540bd8.jpg);
+width: 1280px;
+height: 720px;
+border: 1px solid black;
+}
+
+
+.text {
+width: 278px;
+height: 74px;
+color: #FE196D;
+font-size: 62px;
+border: none;
+background-color:rgba(0, 235, 199, -0.1);
+box-shadow: 3px 2px 52px 9px #FE196D;
+border-radius: 10%;
+position: fixed ;
+top: 51px;
+background-size: 277px 74px;
+
+
+
+
+
+}
+
+
+.space {
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  top: 0px;
+}
+#main {
+
+  margin: 834px;
+  width: 370px;
+  height: 470px;
+  border-radius: 10%;
+ position: fixed;
+  top: 0px;
+}
+
+
+
+#box {
+width: 278px;
+height: 272px;
+border: 1px solid #AFB4F2;
+background-image: url(https://serendipitousthinking.files.wordpress.com/2014/10/tumblr_nbhom5dki71ts1zpko1_500.gif);
+background-size: 286px 246px;
+background-color:rgba(0, 235, 199, -0.1);
+border-radius: 10%;
+
+box-shadow:-3px -9px 86px 18px #AFB4F2;
+ position: fixed;
+  top: 155px;
+}
+
+.btn {
+width: 70px;
+height: 70px;
+border:none;
+margin: 10px;
+font-size: 67px;
+background-image: url(http://coleww.github.io/washers/dolphin/img/w.gif);
+background-size: 68px 70px;
+color: #A3F934;
+border-radius: 10%;
+cursor: pointer;
+border-radius: 10%;
+background-color:rgba(0, 235, 199, -0.1);
+
+
+}
+
+.btn:hover {
+border: none;
+border-radius: 10%;
+
+
+
+}
+
+
+#resetBtn {
+margin: 0px;
+width: 278px;
+height: 100px;
+border: 1px solid #70E5F2;
+background-color: rgba(0, 235, 199, -0.1);
+font-size: 70px;
+box-shadow: 3px 2px 52px 16px #70E5F2;
+border-radius: 10%;
+ position: fixed;
+  top: 459px;
+  color: #A3F934;
+
+
+}
+
+#resetBtn:hover {
+
+margin: 0px;
+width: 278px;
+height: 100px;
+border: 1px solid #70E5F2;
+background-color: rgba(0, 235, 199, -0.1);
+font-size: 70px;
+box-shadow: 3px 2px 52px 16px #FE196D;
+border-radius: 10%;
+color: #FE196D;
+ position: fixed;
+  top: 459px;
+
+
+}
+
+
+

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link rel="stylesheet" href="css/style.css">
+ <script src="javascript.js"></script>
+
+<title>TicTacToe</title>
+</head>
+<body>
+<div class="boxtop1"></div>
+<div class="boxtop2"></div>
+<div class="boxtop3"></div>
+
+<div id="main">
+<div class="text">Tic-T-Toe</div>
+<div class="space"></div>
+<div id="box">
+
+
+
+<input type="button" id="getBBB1" class="btn" onclick="clickbtn('getBBB1')"/>
+<input type="button" id="getBBB2" class="btn" onclick="clickbtn('getBBB2')"/>
+<input type="button" id="getBBB3" class="btn" onclick="clickbtn('getBBB3')"/>
+<input type="button" id="getBBB4" class="btn" onclick="clickbtn('getBBB4')"/>
+<input type="button" id="getBBB5" class="btn" onclick="clickbtn('getBBB5')"/>
+<input type="button" id="getBBB6" class="btn" onclick="clickbtn('getBBB6')"/>
+<input type="button" id="getBBB7" class="btn" onclick="clickbtn('getBBB7')"/>
+<input type="button" id="getBBB8" class="btn" onclick="clickbtn('getBBB8')"/>
+<input type="button" id="getBBB9" class="btn" onclick="clickbtn('getBBB9')"/>
+</div>
+
+<div class="space">
+</div>
+<div>
+<input type="button" id="resetBtn" onclick="resetBtn()" value="Reset" />
+</div>
+</div>
+
+<script>
+var userName = prompt("PLAYER 1: Whats your name?");
+alert("You will be X");
+var userName2 = prompt("PLAYER 2: Whats your name?");
+alert("You will be O");
+var player = 1;
+
+function clickbtn(press) {
+  if (player == 1) {
+  document.getElementById(press).value = "x";
+  document.getElementById(press).disabled = "disabled";
+  player -= 1;
+  getWinner();
+  }else{
+  document.getElementById(press).value = "o";
+  document.getElementById(press).disabled = "disabled";
+  player += 1;
+  getWinner();
+  }
+}
+
+function getWinner() {
+  if (
+  //row 1
+  document.getElementById('getBBB1').value == "x"&&
+  document.getElementById('getBBB2').value == "x"&&
+  document.getElementById('getBBB3').value == "x"||
+  // row 2
+  document.getElementById('getBBB4').value == "x"&&
+  document.getElementById('getBBB5').value == "x"&&
+  document.getElementById('getBBB6').value == "x"||
+  // row 3
+  document.getElementById('getBBB7').value == "x"&&
+  document.getElementById('getBBB8').value == "x"&&
+  document.getElementById('getBBB9').value == "x"||
+  // sideway 1,5,9
+  document.getElementById('getBBB1').value == "x"&&
+  document.getElementById('getBBB5').value == "x"&&
+  document.getElementById('getBBB9').value == "x"||
+  //sideway 3,5,7
+  document.getElementById('getBBB3').value == "x"&&
+  document.getElementById('getBBB5').value == "x"&&
+  document.getElementById('getBBB7').value == "x"||
+  // row 1 going down
+  document.getElementById('getBBB1').value == "x"&&
+  document.getElementById('getBBB4').value == "x"&&
+  document.getElementById('getBBB7').value == "x"||
+  // row 2 going down
+  document.getElementById('getBBB2').value == "x"&&
+  document.getElementById('getBBB5').value == "x"&&
+  document.getElementById('getBBB8').value == "x"||
+  // row 3 going down
+  document.getElementById('getBBB3').value == "x"&&
+  document.getElementById('getBBB6').value == "x"&&
+  document.getElementById('getBBB9').value == "x"
+) {
+alert(userName + ", you are the winner");
+resetBtn();
+  } else if (
+    //row o
+  document.getElementById('getBBB1').value == "o"&&
+  document.getElementById('getBBB2').value == "o"&&
+  document.getElementById('getBBB3').value == "o"||
+  // row 2
+  document.getElementById('getBBB4').value == "o"&&
+  document.getElementById('getBBB5').value == "o"&&
+  document.getElementById('getBBB6').value == "o"||
+  // row 3
+  document.getElementById('getBBB7').value == "o"&&
+  document.getElementById('getBBB8').value == "o"&&
+  document.getElementById('getBBB9').value == "o"||
+  // sideway 1,5,9
+  document.getElementById('getBBB1').value == "o"&&
+  document.getElementById('getBBB5').value == "o"&&
+  document.getElementById('getBBB9').value == "o"||
+  //sideway 3,5,9
+  document.getElementById('getBBB3').value == "o"&&
+  document.getElementById('getBBB5').value == "o"&&
+  document.getElementById('getBBB7').value == "o"||
+  // row 1 going down
+  document.getElementById('getBBB1').value == "o"&&
+  document.getElementById('getBBB4').value == "o"&&
+  document.getElementById('getBBB7').value == "o"||
+  // row 2 going down
+  document.getElementById('getBBB2').value == "o"&&
+  document.getElementById('getBBB5').value == "o"&&
+  document.getElementById('getBBB8').value == "o"||
+  // row 3 going down
+  document.getElementById('getBBB3').value == "o"&&
+  document.getElementById('getBBB6').value == "o"&&
+  document.getElementById('getBBB9').value == "o"
+) {
+alert(userName2 + ", you are the winner");
+resetBtn();
+  }else if (
+//row 1
+  document.getElementById('getBBB1').value !==""&&
+  document.getElementById('getBBB2').value !==""&&
+  document.getElementById('getBBB3').value !==""&&
+  // row 2
+  document.getElementById('getBBB4').value !==""&&
+  document.getElementById('getBBB5').value !==""&&
+  document.getElementById('getBBB6').value !==""&&
+  // row 3
+  document.getElementById('getBBB7').value !==""&&
+  document.getElementById('getBBB8').value !==""&&
+  document.getElementById('getBBB9').value !==""&&
+  // sideway 1,5,9
+  document.getElementById('getBBB1').value !==""&&
+  document.getElementById('getBBB5').value !==""&&
+  document.getElementById('getBBB9').value !==""&&
+  //sideway 3,5,7
+  document.getElementById('getBBB3').value !==""&&
+  document.getElementById('getBBB5').value !==""&&
+  document.getElementById('getBBB7').value !==""&&
+  // row 1 going down
+  document.getElementById('getBBB1').value !==""&&
+  document.getElementById('getBBB4').value !==""&&
+  document.getElementById('getBBB7').value !==""&&
+  // row 2 going down
+  document.getElementById('getBBB2').value !==""&&
+  document.getElementById('getBBB5').value !==""&&
+  document.getElementById('getBBB8').value !==""&&
+  // row 3 going down
+  document.getElementById('getBBB3').value !==""&&
+  document.getElementById('getBBB6').value !==""&&
+  document.getElementById('getBBB9').value !==""
+){
+    alert(userName +" & " + userName2 +", its a tie")
+    resetBtn();
+  }
+}
+
+
+function resetBtn () {
+  document.getElementById('getBBB1').value = "";
+  document.getElementById('getBBB2').value = "";
+  document.getElementById('getBBB3').value = "";
+  document.getElementById('getBBB4').value = "";
+  document.getElementById('getBBB5').value = "";
+  document.getElementById('getBBB6').value = "";
+  document.getElementById('getBBB7').value = "";
+  document.getElementById('getBBB8').value = "";
+  document.getElementById('getBBB9').value = "";
+
+  document.getElementById('getBBB1').disabled = "";
+  document.getElementById('getBBB2').disabled = "";
+  document.getElementById('getBBB3').disabled = "";
+  document.getElementById('getBBB4').disabled = "";
+  document.getElementById('getBBB5').disabled = "";
+  document.getElementById('getBBB6').disabled = "";
+  document.getElementById('getBBB7').disabled = "";
+  document.getElementById('getBBB8').disabled = "";
+  document.getElementById('getBBB9').disabled = "";
+}
+
+</script>
+
+
+
+
+</body>
+</html>
